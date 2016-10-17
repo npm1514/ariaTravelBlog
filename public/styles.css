@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  width: 100vw;
+  font-family: "Oswald";
+}
+
+header, footer {
+  height:100px;
+  width: 100vw;
+  background-color: rgb(94, 115, 255);
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+main {
+  width: 100vw;
+  min-height: 80vh;
+}
+
+.title {
+  padding-top: 20px;
+}
+
+.socials a {
+  text-decoration: none;
+  margin: 10px;
+  color: rgb(94, 115, 255);
+}
+
+header img {
+  height: 100px;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+footer h5 {
+  padding-top: 20px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="travelBlog">
+  <head>
+    <meta charset="utf-8">
+    <title>Aria's Travel Blog</title>
+    <link rel="stylesheet" href="styles.css" >
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  </head>
+  <body ng-controller="mainCtrl">
+    <header>
+      <h1 class="title">Aria's Travel Blog</h1>
+      <img src="aria.png"/>
+    </header>
+    <main>
+      <ui-view></ui-view>
+    </main>
+    <footer>
+      <h5 class="footnote">Aria's Travel Blog Copyright 2016<br>www.ariatravels.com</h5>
+      <div class="socials">
+        <a class="fa fa-facebook fa-2x" href="https://www.facebook.com/aria.hemphill"></a>
+        <a class="fa fa-link fa-2x" href="#"></a>
+        <a class="fa fa-linkedin fa-2x" href="https://www.linkedin.com/in/aria-hemphill-a7246540"></a>
+      </div>
+
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <script src="mainCtrl.js" type="text/javascript"></script>
+    <script src="mainServ.js" type="text/javascript"></script>
+  </body>
+</html>
