@@ -10,17 +10,34 @@
   <body ng-controller="mainCtrl">
     <header>
       <h1 class="title">Aria's Travel Blog</h1>
-      <img src="aria.png"/>
+      <img class="logo" src="./images/aria.png" ui-sref="home"/>
+      <i class="fa fa-bars fa-3x hamburger" ng-click="menuopen = true"></i>
+      <div class="menu" ng-show="menuopen">
+        <div ui-sref="home" class="menuselect topselect flex" ng-click="menuopen=false">
+          <h2>HOME</h2>
+        </div>
+        <div ui-sref="about" class="menuselect flex" ng-click="menuopen=false">
+          <h2>ABOUT</h2>
+        </div>
+        <div ui-sref="blogs" class="menuselect flex" ng-click="menuopen=false">
+          <h2>BLOGS</h2>
+        </div>
+        <div class="menuselect menuclose flex" ng-click="menuopen=false">
+          <h2>CLOSE MENU</h2>
+        </div>
+      </div>
     </header>
     <main>
       <ui-view></ui-view>
     </main>
-    <footer>
-      <h5 class="footnote">Aria's Travel Blog Copyright 2016<br>www.ariatravels.com</h5>
-      <div class="socials">
-        <a class="fa fa-facebook fa-2x" href="https://www.facebook.com/aria.hemphill"></a>
-        <a class="fa fa-link fa-2x" href="#"></a>
-        <a class="fa fa-linkedin fa-2x" href="https://www.linkedin.com/in/aria-hemphill-a7246540"></a>
+    <footer class="flex">
+      <div>
+        <h5 class="footnote">Aria's Travel Blog Copyright 2016<br>www.ariatravels.com</h5>
+        <div class="socials">
+          <a class="fa fa-facebook fa-2x" target="_blank" href="https://www.facebook.com/aria.hemphill"></a>
+          <a class="fa fa-link fa-2x" target="_blank" href="http://ariahemphill.weebly.com/"></a>
+          <a class="fa fa-linkedin fa-2x" target="_blank" href="https://www.linkedin.com/in/aria-hemphill-a7246540"></a>
+        </div>
       </div>
 
     </footer>
