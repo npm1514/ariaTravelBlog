@@ -1,4 +1,4 @@
-var blogModel = require('./blogModel.js');
+var blogModel = require('./../models/blogModel.js');
 
 module.exports = {
   create: function(req, res) {

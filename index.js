@@ -1,9 +1,11 @@
 var express   = require('express'),
-bodyParser  = require('body-parser'),
-cors        = require('cors'),
-mongoose    = require('mongoose');
+bodyParser    = require('body-parser'),
+cors          = require('cors'),
+mongoose      = require('mongoose'),
+passport      = require('passport'),
+session       = require('express-session');
 
-var blogCtrl = require('./blogCtrl');
+var blogCtrl = require('./controllers/blogCtrl');
 
 var app = express();
 

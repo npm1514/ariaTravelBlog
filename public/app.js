@@ -10,6 +10,9 @@ angular.module("travelBlog", ["ui.router"])
     }).state("about", {
       url: "/about",
       templateUrl: "./templates/about.html"
+    }).state("admin", {
+      url: "/admin",
+      templateUrl: "./templates/admin.html"
     });
   $urlRouterProvider
     .otherwise("/");

@@ -28,6 +28,7 @@ h1, h2, h5 {
 h1 {
   margin: 0;
   font-size: 40px;
+  text-align: center;
 }
 
 h5 {
@@ -42,6 +43,15 @@ main {
   width: 100vw;
   min-height: 80vh;
 }
+
+input, input[type=submit] , button {
+  font-family: "Oswald";
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+}
+
+/*index styles*/
 
 .title {
   padding-top: 20px;
@@ -59,10 +69,10 @@ main {
 }
 
 .logo {
-  height: 100px;
+  height: 60px;
   position: absolute;
-  top:0;
-  left:0;
+  top:20px;
+  left:20px;
 }
 
 .logo:hover {
@@ -125,6 +135,23 @@ main {
   justify-content: center;
 }
 
+.loginmodal {
+  height: 150px;
+  width: 400px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 2px solid black;
+  background-color: rgba(241, 85, 18, 0.87);
+  z-index: 10;
+  padding-bottom: 20px;
+}
+
+/*home styles*/
+
 .tophome, .midhome, .bottomhome {
   background-size: cover;
   background-position: center;
@@ -168,6 +195,27 @@ main {
 .bottomhome {
   background-image: url("images/IMG_1094.JPG");
   height: 400px;
+}
+
+/*blog styles*/
+
+.tophead {
+  height: 100px;
+}
+
+.blogItem {
+  width: 70vw;
+  height: max-content;
+  padding: 40px;
+  border: 1px solid rgba(94, 115, 255, 1);
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.blogItem img {
+  width: 80%;
 }
 
 footer h5 {
