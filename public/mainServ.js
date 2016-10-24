@@ -9,6 +9,16 @@ angular.module("travelBlog")
     });
   };
 
+  this.postBlog = function(blog){
+    return $http({
+      method: "POST",
+      url: '/blog',
+      data: blog
+    }).then(function(res){
+      return res.data;
+    });
+  };
+
   this.putBlog = function(blog){
     return $http({
       method: "PUT",
@@ -18,5 +28,29 @@ angular.module("travelBlog")
       return res.data;
     });
   };
+
+  this.deleteBlog = function(blog){
+    return $http({
+      method: "DELETE",
+      url: '/blog/' + blog._id
+    }).then(function(res){
+      return res.data;
+    });
+  };
+
+  this.postLogin = function(userinfo){
+    return $http({
+      method: "POST",
+      url: '/login',
+      data: userinfo
+    }).then(function(res){
+      return $http({
+        method: "GET",
+        url: '/current'
+      }).then(function(res){
+        return res.data;
+      });
+    });
+  }
 
 });

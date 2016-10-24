@@ -44,11 +44,21 @@ main {
   min-height: 80vh;
 }
 
-input, input[type=submit] , button {
+input, button {
   font-family: "Oswald";
   font-size: 15px;
   text-align: center;
   padding: 5px;
+  margin: 10px;
+}
+
+input, textarea {
+  width: 300px;
+}
+
+textarea {
+  height: 200px;
+  margin: 10px;
 }
 
 /*index styles*/
@@ -135,8 +145,8 @@ input, input[type=submit] , button {
   justify-content: center;
 }
 
-.loginmodal {
-  height: 150px;
+.loginmodal, .loginfailuremodal {
+  height: 200px;
   width: 400px;
   position: fixed;
   top: 0;
@@ -147,7 +157,7 @@ input, input[type=submit] , button {
   border: 2px solid black;
   background-color: rgba(241, 85, 18, 0.87);
   z-index: 10;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 
 /*home styles*/
@@ -204,7 +214,7 @@ input, input[type=submit] , button {
 }
 
 .blogItem {
-  width: 70vw;
+  width: 45vw;
   height: max-content;
   padding: 40px;
   border: 1px solid rgba(94, 115, 255, 1);
@@ -215,8 +225,34 @@ input, input[type=submit] , button {
 }
 
 .blogItem img {
-  width: 80%;
+  height: 400px;
+  max-width: 80%;
 }
+
+.blogdetail {
+  width: 70%;
+  margin: auto;
+}
+
+/*admin styles*/
+
+.blogupdate {
+  text-align: center;
+}
+
+.adminfail {
+  text-align: center;
+}
+
+.adminfail a{
+  width: 100vw;
+  height: max-content;
+}
+
+.adminfail a img {
+  width: 100%;
+}
+
 
 footer h5 {
   padding-top: 20px;

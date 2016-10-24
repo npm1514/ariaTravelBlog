@@ -32,16 +32,23 @@
         </div>
       </div>
       <div class="loginmodal flex" ng-show="loginmodalopen">
-        <div class="">
+        <div>
           <h2>Login to Admin</h2>
           <br>
           <form ng-submit="postLogin(userinfo)">
-            <input type="text" ng-model="userinfo.email">
-            <input type="password" ng-model="userinfo.password">
+            <input type="text" ng-model="userinfo.email" placeholder="email">
+            <input type="password" ng-model="userinfo.password" placeholder="password">
             <br>
-            <input type="submit">
+            <button type="submit" name="button">Submit</button>
           </form>
         </div>
+      </div>
+      <div class="loginfailuremodal flex" ng-show="loginfailuremodal">
+        <div>
+          <h2>Sorry, you either have provided an incorrect email/password or you do not have the appropriate admin rights.</h2>
+          <button type="button" ng-click="loginfailuremodal = false">Close</button>
+        </div>
+
       </div>
     </header>
     <main>
