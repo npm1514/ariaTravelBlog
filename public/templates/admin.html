@@ -2,7 +2,7 @@
   <div class="tophead"></div>
   <a ui-sref="home"><img src="./images/giphy.gif"/></a>
 </div>
-<div class="admin" ng-if="currentUser.admin">
+<div class="admin" ng-if="currentUser.admin" ng-click="menuopen=false">
   <div class="tophead"></div>
   <div class="blogupdate">
     <div class="newblog">
@@ -22,10 +22,11 @@
 
         <button id="lastthing" type="button" ng-click="newBlog.links.push({})">Add Links</button>
         <button type="submit" ng-click="addingNewBlog=false">Submit</button>
+        <button type="button" ng-click="addingNewBlog=false">Cancel</button>
       </form>
     </div>
 
-    <div class="existingblogs">
+    <div class="existingblogs flex">
       <div class="blogItem" ng-repeat="blog in blogList | orderBy: '-date'">
         <button type="button" ng-click="deleteBlog(blog)">Delete Blog</button>
         <button type="button" ng-hide="editBlog" ng-click="editBlog=true">Edit Blog</button>
@@ -50,9 +51,12 @@
             <textarea type="text" ng-model="blog.detail" placeholder="Blog Details"></textarea><br>
             <input type="date" ng-model="blog.date">
             <button type="submit">Submit</button>
+            <button type="button" ng-click="editBlog=false">Cancel</button>
           </form>
         </div>
 
+        <br>
+        <hr>
         <br>
         <button ng-click="addingComment = true">Add New Comment</button>
 

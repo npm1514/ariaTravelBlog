@@ -89,7 +89,7 @@ textarea {
   cursor: pointer;
 }
 
-.hamburger {
+.hamburger, .hamburger2 {
   height: 100px;
   position: absolute;
   top:26px;
@@ -98,6 +98,11 @@ textarea {
 
 .hamburger:hover {
   color: rgba(94, 115, 255, 1);
+  cursor: pointer;
+}
+
+.hamburger2:hover {
+  color: #000;
   cursor: pointer;
 }
 
@@ -111,7 +116,11 @@ textarea {
   z-index: 10;
 }
 
-.menuselect {
+.menu:blur {
+  display: none;
+}
+
+.menuselect, .menuselect2 {
   height: 100px;
   width: 100%;
   border: 1px solid #8d8d8d;
@@ -123,10 +132,6 @@ textarea {
   background-color: rgba(94, 115, 255, 1);
   cursor: pointer;
   color: #000;
-}
-
-.topselect {
-  margin-top: 100px;
 }
 
 .menuclose {
@@ -143,6 +148,9 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
 }
 
 .loginmodal, .loginfailuremodal {
@@ -168,8 +176,16 @@ textarea {
   width: 100vw;
 }
 
+.midhome, .bottomhome {
+  max-width: 70vw;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .tophome a, .midhome a, .bottomhome a {
   color: #000;
+  text-shadow: 0.5px 0.5px #fff;
 }
 
 .tophome a:hover, .midhome a:hover, .bottomhome a:hover {
@@ -178,19 +194,21 @@ textarea {
 }
 
 .tophome {
-  background-image: url("images/IMG_1798.JPG");
-  height: 700px;
+  background-image: url("images/IMG_1032.JPG");
+  height: 900px;
 }
 
 .tophome h1 {
-  margin-top: 150px;
+  margin-top: 100px;
+  text-shadow: 0.5px 0.5px #000;
   color: #fff;
-  opacity: 0.75;
-  font-size: 50px;
+  opacity: 0.90;
+  font-size: 60px;
 }
 
 .midhome {
-  background-image: url("images/IMG_1398.JPG");
+  background-image: url("images/familia.JPG");
+  background-position: 50% 40%;
   height: 400px;
 }
 
@@ -214,13 +232,11 @@ textarea {
 }
 
 .blogItem {
-  width: 45vw;
+  width: 400px;
   height: max-content;
-  padding: 40px;
+  padding: 20px;
   border: 1px solid rgba(94, 115, 255, 1);
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px;
   text-align: center;
 }
 
@@ -230,7 +246,7 @@ textarea {
 }
 
 .blogdetail {
-  width: 70%;
+  width: 90%;
   margin: auto;
 }
 

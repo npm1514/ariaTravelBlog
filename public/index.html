@@ -15,7 +15,10 @@
       <img class="logo" src="./images/aria.png" ui-sref="home"/>
       <i class="fa fa-bars fa-3x hamburger" ng-click="menuopen = true"></i>
       <div class="menu" ng-show="menuopen">
-        <div ui-sref="home" class="menuselect topselect flex" ng-click="menuopen=false">
+        <div class="menuselect2 flex">
+          <i class="fa fa-bars fa-3x hamburger2" ng-click="menuopen = false"></i>
+        </div>
+        <div ui-sref="home" class="menuselect flex" ng-click="menuopen=false">
           <h2>HOME</h2>
         </div>
         <div ui-sref="about" class="menuselect flex" ng-click="menuopen=false">

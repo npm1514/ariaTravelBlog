@@ -30,6 +30,7 @@ angular.module("travelBlog")
 
   $scope.postBlog = function(blog){
     blog.dateDisplay = dateDisplayer(blog.date);
+    console.log(blog);
     mainServ.postBlog(blog)
     .then(function(res){
       $scope.addingNewBlog = false;
@@ -49,7 +50,11 @@ angular.module("travelBlog")
   };
 
   $scope.putBlog = function(blog){
-    blog.dateDisplay = dateDisplayer(blog.date);
+    if(!blog.date){
+      delete blog["date"];
+    } else {
+      blog.dateDisplay = dateDisplayer(blog.date);
+    }
     mainServ.putBlog(blog)
     .then(function(res){
       $scope.getBlogs()
