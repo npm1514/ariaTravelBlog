@@ -36,6 +36,6 @@ mongoose.connection.once('open', function(){
   console.log("Connected to mongoDB");
 });
 
-app.listen(8000, function(){
-  console.log("listening to 8000");
+app.listen(80 || 8000, function(){
+  console.log("listening to 80 or 8000");
 });
