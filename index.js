@@ -1,6 +1,6 @@
 var express     = require('express'),
     bodyParser  = require('body-parser'),
-    cors        = require('cors'),
+    // cors        = require('cors'),
     mongoose    = require('mongoose'),
     passport    = require('passport'),
     session     = require('express-session');
@@ -16,7 +16,7 @@ require('./config/passport')(passport);
 app.use(session(config));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(express.static(__dirname + '/public'));
@@ -36,6 +36,6 @@ mongoose.connection.once('open', function(){
   console.log("Connected to mongoDB");
 });
 
-app.listen(80 || 8000, function(){
-  console.log("listening to 80 or 8000");
+app.listen(config.port, function(){
+  console.log("listening to 80 or 3000");
 });
