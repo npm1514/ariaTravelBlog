@@ -30,12 +30,11 @@ app.get('/blog', blogCtrl.read);
 app.put('/blog/:id', blogCtrl.update);
 app.delete('/blog/:id', blogCtrl.delete);
 
-mongoose.connect("mongodb://localhost:27017/blogData");
-mongoose.connection.on('error', console.error.bind(console, 'connection error'));
+mongoose.connect(process.env.MONGO_LABS_URI);
 mongoose.connection.once('open', function(){
-  console.log("Connected to mongoDB");
+	console.log("Connected to Mongo");
 });
 
-app.listen(config.port, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("listening to 80 or 3000");
 });
