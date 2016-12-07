@@ -34,7 +34,6 @@ angular.module('travelBlog').controller('locationCtrl', function($scope, $elemen
       var state = data.address_components[2];
       var country = data.address_components[3];
     }
-    console.log($scope.location);
     if(data.formatted_address){
       $scope.location.address_string = data.formatted_address;
     }

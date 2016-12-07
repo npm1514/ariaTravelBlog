@@ -76,12 +76,9 @@ angular.module("travelBlog")
           max = countList[j];
         }
       }
-      console.log(countList);
       $scope.countryWidth = $scope.countryCount/max*600;
       $scope.stateWidth = $scope.stateCount/max*600;
       $scope.cityWidth = $scope.cityCount/max*600;
-      console.log($scope.countryWidth);
-      console.log($scope.stateWidth);
 
     });
   };

@@ -24,14 +24,12 @@ angular.module("travelBlog")
     mainServ.getBlogs()
     .then(function(res){
       $scope.blogList = res;
-      console.log($scope.blogList);
     });
   };
   $scope.getBlogs();
 
   $scope.postBlog = function(blog){
     blog.dateDisplay = dateDisplayer(blog.date);
-    console.log(blog);
     mainServ.postBlog(blog)
     .then(function(res){
       $scope.addingNewBlog = false;

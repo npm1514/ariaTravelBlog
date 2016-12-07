@@ -166,35 +166,36 @@ textarea {
 
 /*home styles*/
 
-.tophome, .midhome, .bottomhome {
+.banner, .homeabout, .homeblog, .homemap {
   background-size: cover;
   background-position: center;
   width: 100vw;
 }
 
-.midhome, .bottomhome {
+.homeabout, .homeblog, .homemap {
   max-width: 70vw;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  height: 400px;
 }
 
-.tophome a, .midhome a, .bottomhome a {
+.banner a, .homeabout a, .homeblog a, .homemap a {
   color: #000;
   text-shadow: 0.5px 0.5px #fff;
 }
 
-.tophome a:hover, .midhome a:hover, .bottomhome a:hover {
+.banner a:hover, .homeabout a:hover, .homeblog a:hover, .homemap a:hover {
   color: rgba(94, 115, 255, 1);
   cursor: pointer;
 }
 
-.tophome {
+.banner {
   background-image: url("images/IMG_1032.JPG");
   height: 900px;
 }
 
-.tophome h1 {
+.banner h1 {
   margin-top: 100px;
   text-shadow: 0.5px 0.5px #000;
   color: #fff;
@@ -202,13 +203,12 @@ textarea {
   font-size: 60px;
 }
 
-.midhome {
+.homeabout {
   background-image: url("images/familia.jpg");
   background-position: 50% 40%;
-  height: 400px;
 }
 
-.midtophome, .midbottomhome {
+.midbanner, .hometext {
   height: 100px;
   width: 100vw;
   text-align: center;
@@ -216,9 +216,12 @@ textarea {
   color: #fff;
 }
 
-.bottomhome {
+.homeblog {
   background-image: url("images/IMG_1094.JPG");
-  height: 400px;
+}
+
+.homemap {
+  background-image: url("images/map.png");
 }
 
 /*blog styles*/
