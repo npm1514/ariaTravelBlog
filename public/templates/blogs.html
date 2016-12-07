@@ -6,10 +6,10 @@
       <h1>{{blog.title}}</h1>
       <p>{{blog.dateDisplay}}</p>
       <img ng-if="blog.img" src="{{blog.img}}"/>
-      <h2><strong>{{blog.location}}</strong></h2>
-      <h2 class="blogdetail">{{blog.detail}}</h2>
-      <br>
-      <h2>Links</h2>
+      <h2><strong>{{blog.location.address_string}}</strong></h2>
+      <h3 class="blogdetail">{{blog.detail}}</h3>
+      <br ng-if="blog.links[0].url">
+      <h2 ng-if="blog.links[0].url">Links</h2>
       <div ng-repeat="link in blog.links track by $index">
         <a target="_blank" href="{{blog.links[$index].url}}">{{blog.links[$index].title}}</a>
       </div>

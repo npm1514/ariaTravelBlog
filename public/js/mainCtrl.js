@@ -24,6 +24,7 @@ angular.module("travelBlog")
     mainServ.getBlogs()
     .then(function(res){
       $scope.blogList = res;
+      console.log($scope.blogList);
     });
   };
   $scope.getBlogs();

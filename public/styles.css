@@ -116,10 +116,6 @@ textarea {
   z-index: 10;
 }
 
-.menu:blur {
-  display: none;
-}
-
 .menuselect, .menuselect2 {
   height: 100px;
   width: 100%;
@@ -269,6 +265,48 @@ textarea {
   width: 100%;
 }
 
+.about {
+  text-align: center;
+}
+
+.about_img {
+  width: 60vw;
+}
+
+.about_aria {
+  max-width: 30vw;
+}
+
+.about_link {
+  background: #8d8d8d;
+  color: #fff;
+  padding: 10px;
+  width: max-content;
+  margin: 20px auto;
+}
+
+.about_link:hover {
+  color: rgba(94, 115, 255, 1);
+  cursor: pointer;
+}
+
+.about_text {
+  padding: 20px;
+  background-color: #8d8d8d;
+  color: #fff;
+  width: 60vw;
+  margin: auto;
+}
+
+#map {
+  width: 600px;
+  height: 500px;
+  margin: auto;
+}
+
+.countSection {
+  text-align: center;
+}
 
 footer h5 {
   padding-top: 20px;

@@ -12,7 +12,7 @@
         <input type="text" ng-model="newBlog.title" placeholder="Blog Title"><br>
         <textarea type="text" ng-model="newBlog.details" placeholder="Blog Details"></textarea><br>
         <input type="date" ng-model="newBlog.date"><br>
-        <input type="text" ng-model="newBlog.location" placeholder="Blog Location"><br>
+        <location-search location="newBlog.location"></location-search><br>
         <input type="text" ng-model="newBlog.img" placeholder="Image URL"><br>
         <div ng-repeat="link in newBlog.links">
           <a target="_blank" href="{{blog.links[$index].url}}">{{blog.links[$index].title}}</a>
@@ -34,10 +34,10 @@
           <h1>{{blog.title}}</h1>
           <p>{{blog.dateDisplay}}</p>
           <img ng-if="blog.img" src="{{blog.img}}"/>
-          <h2><strong>{{blog.location}}</strong></h2>
-          <h2 class="blogdetail">{{blog.detail}}</h2>
-          <br>
-          <h2>Links</h2>
+          <h2><strong>{{blog.location.address_string}}</strong></h2>
+          <h3 class="blogdetail">{{blog.detail}}</h3>
+          <br ng-if="blog.links[0].url">
+          <h2 ng-if="blog.links[0].url">Links</h2>
           <div ng-repeat="link in blog.links track by $index">
             <a target="_blank" href="{{blog.links[$index].url}}">{{blog.links[$index].title}}</a>
           </div>
@@ -47,7 +47,7 @@
           <form ng-submit="putBlog(blog)">
             <input type="text" ng-model="blog.title" placeholder="Blog Title"><br>
             <input type="text" ng-model="blog.img" placeholder="Image URL"><br>
-            <input type="text" ng-model="blog.location" placeholder="Blog Location"><br>
+            <location-search location="blog.location"></location-search><br>
             <textarea type="text" ng-model="blog.detail" placeholder="Blog Details"></textarea><br>
             <input type="date" ng-model="blog.date">
             <button type="submit">Submit</button>

@@ -10,11 +10,13 @@ angular.module("travelBlog")
   };
 
   this.postBlog = function(blog){
+    console.log(blog);
     return $http({
       method: "POST",
       url: '/blog',
       data: blog
     }).then(function(res){
+      console.log(res);
       return res.data;
     });
   };

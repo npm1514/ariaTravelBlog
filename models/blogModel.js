@@ -6,7 +6,14 @@ var blogModel = new mongoose.Schema({
     title: String,
     date: Date,
     dateDisplay: String,
-    location: String,
+    location: {
+      address_string: String,
+      lat: Number,
+      lng: Number,
+      city: String,
+      state: String,
+      country: String
+    },
     links: [{
       url: String,
       title: String
