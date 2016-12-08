@@ -9,9 +9,9 @@ angular.module("travelBlog")
   $scope.cityList = [];
 
 
-  var center = {lat: 0, lng: 131.044};
+  var center = {lat: 25, lng: 5};
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 1,
+    zoom: 2,
     center: center
   });
 
