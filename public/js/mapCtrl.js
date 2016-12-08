@@ -76,9 +76,9 @@ angular.module("travelBlog")
           max = countList[j];
         }
       }
-      $scope.countryWidth = $scope.countryCount/max*600;
-      $scope.stateWidth = $scope.stateCount/max*600;
-      $scope.cityWidth = $scope.cityCount/max*600;
+      $scope.countryWidth = $scope.countryCount/max;
+      $scope.stateWidth = $scope.stateCount/max;
+      $scope.cityWidth = $scope.cityCount/max;
 
     });
   };

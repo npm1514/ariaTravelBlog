@@ -4,7 +4,7 @@ body {
   font-family: "Oswald";
 }
 
-header, footer {
+header {
   height:100px;
   width: 100vw;
   background-color: rgba(64, 0, 199, 0.71);
@@ -12,13 +12,18 @@ header, footer {
   text-align: center;
 }
 
+footer {
+  height:max-content;
+  width: 100vw;
+  background-color: rgba(64, 0, 199, 0.71);
+  color: #fff;
+  text-align: center;
+  padding: 40px 0 40px 0;
+}
+
 header {
   position: absolute;
   top: 0;
-}
-
-footer {
-  height: 150px;
 }
 
 h1, h2, h5 {
@@ -64,7 +69,7 @@ textarea {
 /*index styles*/
 
 .title {
-  padding-top: 20px;
+  /*padding-top: 20px;*/
 }
 
 .socials a {
@@ -150,7 +155,7 @@ textarea {
 }
 
 .loginmodal, .loginfailuremodal {
-  height: 200px;
+  height: max-content;
   width: 400px;
   position: fixed;
   top: 0;
@@ -277,7 +282,18 @@ textarea {
 }
 
 .about_aria {
-  max-width: 30vw;
+  max-width: 30%;
+}
+
+.about_aria_container {
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  /*flex-direction: row;*/
+  justify-content: center;
+  /*align-content: space-around;*/
+  align-items: center;
+  /*flex-wrap: wrap;*/
 }
 
 .about_link {
@@ -302,21 +318,133 @@ textarea {
 }
 
 #map {
-  width: 600px;
+  width: 60vw;
   height: 500px;
   margin: auto;
 }
 
 .countSection {
-  text-align: center;
+  text-align: left;
+  width: 60vw;
+  height: max-content;
+  margin: auto;
 }
 
-footer h5 {
-  padding-top: 20px;
+.countBar {
+  height: 40px;
 }
 
-@media only screen and (max-width: 900px){
+@media (max-width: 900px){
   .title {
     display: none;
+  }
+
+}
+
+@media (max-width: 600px){
+      #map {
+        width: 100vw;
+        height: 50vh;
+      }
+
+      .countSection {
+        width: 100vw;
+      }
+}
+
+@media (max-width: 500px){
+    .banner {
+      background-position: 0px;
+    }
+}
+
+@media (max-device-width: 500px){
+
+  .logo {
+    height: 120px;
+    top:40px;
+    left:40px;
+  }
+
+  .hamburger, .hamburger2 {
+    top:50px;
+    right:50px;
+  }
+
+  header .fa-3x {
+    font-size: 100px;
+  }
+
+  header, .menuselect2, .tophead {
+    height: 200px;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, button, input, .about h1 {
+    font-size: 300%;
+  }
+
+  .blogItem {
+    width: 100vw;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .menu {
+    width: 100vw;
+    font-size: 60px;
+    left:0;
+  }
+
+  .menuselect {
+    height: max-content;
+    padding: 40px 0 40px 0;
+  }
+
+  .menuselect2 {
+    height: 200px;
+  }
+
+  .hometext {
+    height: max-content;
+    padding: 40px 0 40px 0;
+  }
+
+  footer {
+    height: max-content;
+    padding: 40px 0 40px 0;
+  }
+
+  .banner a, .homeabout a, .homeblog a, .homemap a {
+    color: rgba(94, 115, 255, 1);
+    text-shadow: 0.5px 0.5px #fff;
+  }
+
+  .about_text, .about_link {
+    width: 100vw;
+    padding: 40px 0 40px 0;
+  }
+
+  .about_img {
+    width: 100vw;
+  }
+
+  .about_aria {
+    max-width: 50%;
+    width: 50%;
+  }
+
+  .banner {
+    background-position: 0px;
+  }
+
+  .countSection {
+    width: 100vw;
+  }
+
+  #map {
+    width: 100vw;
+    height: 30vh;
   }
 }

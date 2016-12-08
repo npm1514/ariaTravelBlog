@@ -5,19 +5,13 @@
   <br>
   <div class="countSection">
     <h2 style="color: blue">Total Countries Visited - {{countryCount}}</h2>
-    <svg ng-if="countryWidth" width="600" height="25">
-      <rect ng-attr-width="{{countryWidth}}" height="25" fill="blue"/>
-    </svg>
+    <div class="countBar" style="background-color: green; width: {{countryWidth * 100}}%"></div>
     <br><br>
     <h2 style="color: red">Total States Visited - {{stateCount}}</h2>
-    <svg ng-if="stateWidth" width="600" height="25">
-      <rect ng-attr-width="{{stateWidth}}" height="25" fill="red"/>
-    </svg>
+    <div class="countBar" style="background-color: blue; width: {{stateWidth * 100}}%"></div>
     <br><br>
     <h2 style="color: green">Total Cities Visited - {{cityCount}}</h2>
-    <svg ng-if="cityWidth" width="600" height="25">
-      <rect ng-attr-width="{{cityWidth}}" height="25" fill="green"/>
-    </svg>
+    <div class="countBar" style="background-color: red; width: {{cityWidth * 100}}%"></div>
     <br><br>
   </div>
 </div>
